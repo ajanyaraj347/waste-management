@@ -8,7 +8,7 @@
  * Microcontroller: Atmega 328p
  * Pins used: Ultrasonic sensor:  Trigger pin - D3
  *                                Echo pin - D2
- */
+ */ 
 #include <ESP8266WiFi.h> // For WiFi
 
 const char *ssid =  "Sashwat's Note 8"; // WiFi SSID
@@ -51,5 +51,5 @@ void loop() {
   durationForPulse = pulseIn(ultasonicSensorEchoPin, HIGH);
   waterLevelDistance = durationForPulse / 29 / 2; // distance formula
   Serial.print("Distance: ");Serial.print(waterLevelDistance);Serial.println(" cm"); // Display distance in cm
-  delay(1000);
+  delay(500);
 }
